@@ -1,0 +1,8 @@
+/* README for ptr11p4
+*
+*  Given: A singly linked list with a list head.
+*  Want: A function that deletes an indicated entry.
+*
+* The function takes a pointer to an entry, it then deletes the next entry.
+*
+*/
