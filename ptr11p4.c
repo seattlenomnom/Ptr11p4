@@ -3,6 +3,11 @@
  * create a singly linked list with a list head. Create a function to delete
  * a given entry.
  *
+ * printList() issues:
+ * the logic needed is new, although I've written this before. Look for it
+ * in a previous program or figure it out again?. Looked at ptr11p3.c, found
+ * the problem.
+ *
 */
 
 
@@ -39,7 +44,7 @@ struct entry {
 /* function declarations */
 
 void deleteEntry(struct entry *p2Entry);
-void printList(struct entry *p2List);
+void printList(struct entry *p2ListHead);
 
 
 int main(int argc, char *argv[]) {
@@ -94,9 +99,18 @@ void deleteEntry(struct entry *p2Entry) {
 }
 
 
-void printList(struct entry *p2List) {
+void printList(struct entry *listHead) {
 
+    struct entry *theEntry;
 
+    if(listHead->next != (struct entry *) 0){
+        theEntry = listHead->next;
+        while(theEntry != (struct entry *) 0){
+            printf("%i " , theEntry->value);
+            theEntry = theEntry->next;
+    }
+        printf("\n");
+    }
 
 }
 
