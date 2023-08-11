@@ -74,10 +74,13 @@ int main(int argc, char *argv[]) {
 
     printList(&listHead);
 
+    /* delete an entry, delete the entry after entry 2 */
 
+    deleteEntry(&n2);
 
+    /* print out the list */
 
-
+    printList(&listHead);
 
 
     return(0);
@@ -89,12 +92,11 @@ int main(int argc, char *argv[]) {
 
 void deleteEntry(struct entry *p2Entry) {
 
+    struct entry *p2deleteEntry;
 
-
-
-
-
-
+    p2deleteEntry = p2Entry->next;
+    p2Entry->next = p2deleteEntry->next;
+    p2deleteEntry->next = (struct entry *) 0;
 
 }
 
